@@ -1,0 +1,11 @@
+[p.215]
+"C:\Program Files\MariaDB 10.5\bin"
+
+[p.256]
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+from Investar import Analyzer
+
+
+

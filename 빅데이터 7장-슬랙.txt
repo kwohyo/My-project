@@ -1,0 +1,20 @@
+xoxb-3997201844320-3976022862564-FdYzuWsZ6EQhi678jsGrSYJO
+
+[p.355]
+from slacker import Slacker
+slack=Slacker('xoxb-3997201844320-3976022862564-FdYzuWsZ6EQhi678jsGrSYJO')
+slack.chat.post_message('#general','Hello, my friend!')
+
+[구글링]
+import requests
+ 
+def post_message(token, channel, text):
+    response = requests.post("https://slack.com/api/chat.postMessage",
+        headers={"Authorization": "Bearer "+token},
+        data={"channel": channel,"text": text}
+    )
+    print(response)
+ 
+myToken = "xoxb-3997201844320-3976022862564-FdYzuWsZ6EQhi678jsGrSYJO"
+ 
+post_message(myToken,"#general","mySlackBot")

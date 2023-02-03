@@ -1,0 +1,14 @@
+[p.220]
+import pymysql
+
+connection = pymysql.connect(host='localhost',post=3306,db='INVESTAR', user='root',passwd='myPa$$word',autocommit=True)
+
+cursor=connection.cursor()
+cursor.execute("SELECT VERSION();")
+result=cursor.fetchone()
+
+print("MariaDB version : {}.format(result))
+
+connection.close()
+
+MariaDB version : ('10.5.1-MariaDB',)
